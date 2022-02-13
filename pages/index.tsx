@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 
   const bookingDays = [];
   const resources = ["Vask 1", "Vask 2", "Tørk"]
-  const timeSlots = ["00:00-01:00","01:00-02:00","02:00-03:00","03:00-04:00","04:00-04:00"]
+  const timeSlots = ["00-01","01-02","02-03","03-04","04-05"]
 
   for(let i = 0; i < 7; i++ ) {
     bookingDays.push(new Date(today.setDate(today.getDate() + 1)))
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
       <main>
         {
           bookingDays.map(date => {
-            console.log("Iterating")
             return (
               <div key={date.getDate()} tabIndex={0} className="collapse border rounded-box border-base-300 collapse-arrow show">
                 <input type="checkbox" />
